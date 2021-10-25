@@ -3,4 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 li{
   list-style: none;
+  &.letter{
+    padding: 15px 20px;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.10);
+    margin: 10px;
+    background-color: rgb(92, 166, 226);
+    color: azure;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+  }
 }

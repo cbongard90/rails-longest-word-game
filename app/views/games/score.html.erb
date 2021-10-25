@@ -1,4 +1,11 @@
-<p>The letters are <%= params[:letters] %></p>
-<p>Your guess was <%= params[:guess].upcase %></p>
+<h1>Result</h1>
+
+<% if @valid_answer && @valid_word %>
+  <p><strong>Congratulations!</strong> <%= params[:guess].upcase %> is a valid english word!</p>
+<% elsif @valid_word %>
+  <p>Sorry but <strong><%= params[:guess].upcase %></strong> can't be built out of <%= params[:letters] %></p>
+<% else %>
+  <p>Sorry but <strong><%= params[:guess].upcase %></strong> does not seem to be a valid English word...</p>
+<% end %>
 
 <%= link_to 'Play a new game', new_path %>
